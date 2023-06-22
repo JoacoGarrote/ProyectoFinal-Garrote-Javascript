@@ -1,0 +1,573 @@
+/* PALETA DE COLORES */
+:root {
+  --clr-link: rgb(105, 176, 179);
+  --clr-darkblue: rgb(82, 94, 128);
+  --clr-red: rgb(226, 6, 6);
+  --clr-argentina: rgb(117, 170, 219);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Eczar", serif;
+}
+
+.disabled {
+  display: none;
+}
+
+h3 {
+  font-size: 1.3rem;
+}
+
+/* HEADER */
+header {
+  position: fixed;
+  z-index: 1030;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: var(--clr-link);
+  background-image: linear-gradient(62deg, cadetblue 0%, white 100%);
+  padding: 2rem;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+}
+
+.menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-logo-link {
+  display: flex;
+  color: var(--clr-darkblue);
+  text-decoration: none;
+  font-size: 1.5em;
+  text-align: center;
+  gap: 5px;
+}
+.menu-logo-link:hover {
+  color: rgba(253, 254, 255, 0.774);
+  transition: 250ms;
+}
+.b-logo {
+  color: var(--clr-red);
+}
+
+.menu-atajos {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  margin-bottom: 0;
+  gap: 3rem;
+}
+
+.menu-atajos li a {
+  text-decoration: none;
+  margin-top: 2rem;
+}
+
+.menu-atajos-turnos {
+  position: relative;
+  padding: 0.6rem;
+  color: var(--clr-darkblue);
+}
+.menu-atajos-contacto {
+  position: relative;
+  padding: 0.6rem;
+  color: rgba(19, 5, 2, 0.456);
+}
+
+/* Hover de los links */
+
+.menu-atajos-turnos::before,
+.menu-atajos-contacto::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  background-color: var(--clr-link);
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.menu-atajos-turnos:hover::before,
+.menu-atajos-contacto:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+/* ------------- Seccion principal ------------- */
+/* Hero */
+.seccion-principal-hero {
+  background: url(../img/banner-principal.jpg) center/cover;
+  display: flex;
+  height: auto;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem;
+  margin-top: 6.2rem;
+}
+
+.sp-hero {
+  text-align: center;
+  margin: auto;
+  padding: 8rem;
+}
+.h1-hero {
+  font-size: 3rem;
+  border-radius: 30px;
+  text-align: center;
+  margin: auto;
+  text-shadow: 1px 1px 0 white;
+}
+.h1-hero-b {
+  color: var(--clr-red);
+}
+.p-hero {
+  font-size: 1.3rem;
+  margin-top: 4rem;
+  text-shadow: 1px 1px 0 white;
+}
+
+/*------------- Cards -------------*/
+.seccion-cartas {
+  display: grid;
+  grid-template-columns: 3fr 3fr 3fr;
+  padding: 4rem;
+  padding-top: 6rem;
+  background-color: rgba(95, 158, 160, 0.445);
+  gap: 3.5rem;
+  justify-items: center;
+}
+.card {
+  background-color: var(--clr-argentina);
+  background-image: radial-gradient(
+    rgb(117, 170, 219) 20%,
+    rgba(65, 77, 102, 0.74) 100%
+  );
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+  padding: 5rem 5rem;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+  max-width: 400px;
+  transition: 0.5s all ease 0s;
+  -webkit-transition: 0.5s all ease 0s;
+  -moz-transition: 0.5s all ease 0s;
+  -ms-transition: 0.5s all ease 0s;
+}
+
+.card:hover,
+.card:active {
+  background-color: var(--clr-argentina);
+  background-image: radial-gradient(
+    rgb(173, 13, 13) 20%,
+    rgba(235, 32, 32, 0.781) 100%
+  );
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  transform: scale(1.05);
+  transition: 0.5s all ease 0s;
+  -webkit-transition: 0.5s all ease 0s;
+  -moz-transition: 0.5s all ease 0s;
+  -ms-transition: 0.5s all ease 0s;
+}
+
+.icon-card {
+  font-size: 7rem;
+}
+.h3-card {
+  color: rgba(245, 245, 245, 0.877);
+  text-align: center;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 20px 20px;
+  border-left: 8px solid rgba(207, 198, 198, 0.884);
+  border-top-left-radius: 100px;
+  border-bottom-left-radius: 30px;
+  border-right: 8px solid rgba(207, 198, 198, 0.884);
+  border-bottom-right-radius: 100px;
+  border-top-right-radius: 30px;
+}
+.p-card {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", Verdana, Geneva,
+    Tahoma, sans-serif;
+  color: white;
+  padding-top: 2rem;
+  font-size: 1.15rem;
+}
+.p-card b {
+  color: rgba(0, 0, 0, 0.815);
+  font-weight: bold;
+  font-size: large;
+}
+
+.i-personal,
+.i-especialidades,
+.i-plan {
+  color: whitesmoke;
+}
+
+/*------------- Turnos -------------*/
+
+.turnos-div {
+  display: grid;
+  grid-template-columns: 6fr 6fr;
+  padding-top: 6rem;
+  background-color: rgba(95, 158, 160, 0.445);
+}
+
+.seccion-turnos,
+.seccion-turnos-agendados {
+  padding: 2rem;
+  padding-top: 3rem;
+  background-color: rgba(95, 158, 160, 0.445);
+  border-top: 3px solid rgba(0, 0, 0, 0.219);
+}
+.h2-turnos {
+  color: rgba(12, 12, 12, 0.897);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  font-size: 3rem;
+  text-align: center;
+  background-color: white;
+  background-image: radial-gradient(
+    rgba(209, 200, 200, 0.404) 2%,
+    rgb(82, 94, 128) 90%
+  );
+  border-left: 4px solid rgba(207, 198, 198, 0.25);
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 30px;
+  border-right: 4px solid rgba(207, 198, 198, 0.25);
+  border-bottom-left-radius: 100px;
+  border-top-left-radius: 30px;
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+}
+
+.container-medicos-disponibles,
+.container-turnos-agendados {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  background-color: rgba(128, 128, 128, 0.877);
+  border: 1rem solid var(--clr-argentina);
+  border-radius: 40px;
+  gap: 1.3rem;
+  overflow-y: scroll;
+  height: 30rem;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+}
+.medicos-disponibles {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.medicos-js-main,
+.medicos-js-turnos {
+  align-items: center;
+  max-width: 1400px;
+  max-height: 10rem;
+  gap: 20px;
+  display: grid;
+  grid-template-columns: 0.15fr 1fr 1fr 1fr 1fr 1fr;
+  background-color: whitesmoke;
+  border-radius: 8px;
+  border: 2px solid black;
+  padding: 10px;
+}
+
+.medicos-js-main > *,
+.medicos-js-turnos > * {
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  display: inline;
+  text-align: center;
+  font-size: 14px;
+}
+
+.medicos-js-main > * > p,
+.medicos-js-turnos > * > p {
+  font-family: "Maven Pro", sans-serif;
+  font-weight: bold;
+  font-size: 19.5px;
+}
+
+.medicos-foto {
+  max-width: 4rem;
+}
+
+/* Botones e info*/
+
+.medico-agregar-btn,
+.medico-remover-btn {
+  padding: 0.6rem;
+  border: 2px solid black;
+  border-radius: 100vmax;
+  appearance: none;
+  background-color: #ffffff;
+  border-radius: 40em;
+  border-style: none;
+  box-shadow: #adcfff 0 -12px 6px inset;
+  box-sizing: border-box;
+  color: #000000;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system, sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: -0.24px;
+  margin: 0;
+  outline: none;
+  padding: 1rem 1.3rem;
+  quotes: auto;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+.medico-agregar-btn:hover,
+.medico-remover-btn:hover {
+  background-color: #ffc229;
+  box-shadow: #ff6314 0 -6px 8px inset;
+  transform: scale(1.125);
+}
+.medico-agregar-btn:active,
+.medico-remover-btn:active {
+  transform: scale(1.025);
+}
+.var-color-js {
+  background-color: rgba(178, 182, 182, 0.445);
+}
+
+.div-botones-turnos {
+  margin-top: 30px;
+  padding-top: 1.25rem;
+  display: flex;
+  justify-content: space-around;
+}
+.btn-confirmar-turnos {
+  padding: 1.25rem;
+  border-style: none;
+  border-radius: 40px;
+  transition: 0.2s;
+}
+.btn-confirmar-turnos:hover {
+  background-color: rgba(55, 172, 26, 0.842);
+  box-shadow: rgba(20, 61, 10, 0.788) 0 -6px 8px inset;
+  transform: scale(1.125);
+}
+.btn-vaciar-turnos {
+  padding: 1.25rem;
+  border-style: none;
+  border-radius: 40px;
+  transition: 0.2s;
+}
+.btn-vaciar-turnos:hover {
+  background-color: rgba(255, 0, 0, 0.835);
+  box-shadow: rgba(145, 14, 14, 0.918) 0 -6px 8px inset;
+  transform: scale(1.125);
+}
+
+.h4-confirmacion {
+  text-align: center;
+  margin-top: 2rem;
+  border-style: double;
+  border-radius: 30px;
+  padding: 2rem;
+  color: green;
+}
+
+.info-turnos {
+  background-color: rgba(249, 252, 252, 0.404);
+  margin-top: 30px;
+  padding-top: 1.25rem;
+  display: grid;
+  grid-template-columns: 2fr 6fr;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid rgba(255, 254, 254, 0.863);
+  border-top-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+.info-turnos h4 {
+  text-align: center;
+  padding: 20px;
+}
+.info-turnos p {
+  letter-spacing: 1.5px;
+}
+.info-turnos p b {
+  color: var(--clr-red);
+}
+
+/*------------- Planes -------------*/
+
+.seccion-planes {
+  padding: 2rem;
+  padding-top: 3rem;
+  background-color: rgba(95, 158, 160, 0.445);
+}
+.ul-planes {
+  background-color: rgba(95, 158, 160, 0.26);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid floralwhite;
+  border-top-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+.ul-planes li img {
+  max-width: 100%;
+  max-height: 100%;
+}
+/*------------- Formulario y contacto -------------*/
+
+.info-contacto {
+  display: grid;
+  grid-template-columns: 6fr 6fr;
+  padding: 4rem;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  justify-content: center;
+  align-items: center;
+  max-height: 100%;
+  max-width: 100%;
+  border: 2px solid floralwhite;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  border-right: none;
+  border-left: none;
+}
+.imagen-contacto {
+  max-width: 100%;
+  max-height: 100%;
+  border: 0.5px solid rgba(133, 126, 126, 0.842);
+  border-radius: 20px;
+}
+.info-contacto-izq h2 {
+  font-size: 2.5rem;
+  padding-bottom: 30px;
+  color: #273a53ce;
+}
+.info-contacto-izq p {
+  letter-spacing: 0.01rem;
+  line-height: 2rem;
+  color: rgba(0, 0, 0, 0.822);
+}
+
+#formulario {
+  scroll-behavior: smooth;
+}
+.seccion-formulario {
+  padding: 2rem;
+  padding-top: 3rem;
+  background-color: rgba(95, 158, 160, 0.445);
+}
+.form-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: auto;
+  padding: 2rem;
+  border: 1rem solid white;
+  border-radius: 40px;
+  gap: 2rem;
+  max-width: 85%;
+}
+.form-izq {
+  display: flex;
+  flex-direction: column;
+}
+.form-der {
+  display: flex;
+  flex-direction: column;
+}
+.h2-formulario {
+  text-align: center;
+  justify-content: center;
+  font-size: 1.25rem;
+}
+
+.btn-form {
+  margin-top: 20px;
+  align-items: center;
+  text-align: center;
+}
+
+.btn-form input {
+  padding: 20px;
+  border-style: none;
+  border-radius: 40px;
+  transition: 0.2s;
+}
+.btn-form input:hover {
+  background-color: rgba(133, 136, 132, 0.842);
+  box-shadow: rgba(94, 95, 93, 0.788) 0 -6px 8px inset;
+  transform: scale(1.125);
+}
+
+label {
+  font-size: 1.25rem;
+  text-decoration: none;
+  padding: 5px;
+}
+input,
+select {
+  border: none;
+  padding: 0.3rem;
+  border-radius: 40px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+}
+textarea {
+  height: 100%;
+}
+
+/* FOOTER */
+footer {
+  padding-top: 2rem;
+  background-color: rgba(200, 207, 207, 0.76);
+  border-top: 3px solid rgba(0, 0, 0, 0.219);
+}
+.div-footer {
+  gap: 3.5rem;
+  justify-items: center;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 4.5fr 1fr 4.5fr;
+  padding: 4rem;
+}
+.div-footer p {
+  font-size: 1.5rem;
+}
+
+.separador {
+  border-left: 5px solid var(--clr-darkblue);
+  height: 150px;
+  left: 50%;
+  margin-left: -3px;
+  top: 0;
+}

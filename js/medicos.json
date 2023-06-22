@@ -1,0 +1,163 @@
+[
+  {
+    "id": 1,
+    "nombre": "Rossi, Valentina",
+    "especialidad": "Medicina General",
+    "imagen": "./img/female.jpg",
+    "plan": "OSDE",
+    "horario": "De 8:00 a 12:00"
+  },
+  {
+    "id": 2,
+    "nombre": "Martínez, Franco",
+    "especialidad": "Pediatria",
+    "imagen": "./img/male.jpg",
+    "plan": "Swiss Medical",
+    "horario": "De 12:00 a 16:00"
+  },
+  {
+    "id": 3,
+    "nombre": "Esposito, Renata",
+    "especialidad": "Ortopedia",
+    "imagen": "./img/female.jpg",
+    "plan": "OMINT",
+    "horario": "De 16:00 a 20:00"
+  },
+  {
+    "id": 4,
+    "nombre": "Bianchi, Camila",
+    "especialidad": "Cardiologia ",
+    "imagen": "./img/female.jpg",
+    "plan": "Galeno",
+    "horario": "De 16:00 a 20:00"
+  },
+  {
+    "id": 5,
+    "nombre": "Rinaldi, Mateo",
+    "especialidad": "Ginecologia",
+    "imagen": "./img/male.jpg",
+    "plan": "Galeno",
+    "horario": "De 8:00 a 12:00"
+  },
+  {
+    "id": 6,
+    "nombre": "Romero, Sofia",
+    "especialidad": "Medicina General",
+    "imagen": "./img/female.jpg",
+    "plan": "Grupo Sancor Seguros",
+    "horario": "De 12:00 a 16:00"
+  },
+  {
+    "id": 7,
+    "nombre": "De Luca, Tomás",
+    "especialidad": "Psiquiatria",
+    "imagen": "./img/male.jpg",
+    "plan": "OSDE",
+    "horario": "De 8:00 a 12:00"
+  },
+  {
+    "id": 8,
+    "nombre": "Fernández, Lucía",
+    "especialidad": "Dermatologia ",
+    "imagen": "./img/female.jpg",
+    "plan": "Swiss Medical",
+    "horario": "De 12:00 a 16:00"
+  },
+  {
+    "id": 9,
+    "nombre": "Gallo, Joaquín",
+    "especialidad": "Ginecologia",
+    "imagen": "./img/male.jpg",
+    "plan": "OMINT",
+    "horario": "De 16:00 a 20:00"
+  },
+  {
+    "id": 10,
+    "nombre": "Moretti, Agustina",
+    "especialidad": "Medicina General",
+    "imagen": "./img/female.jpg",
+    "plan": "Galeno",
+    "horario": "De 16:00 a 20:00"
+  },
+  {
+    "id": 11,
+    "nombre": "Costa, Nicolás",
+    "especialidad": "Pediatria ",
+    "imagen": "./img/male.jpg",
+    "plan": "Medicus",
+    "horario": "De 8:00 a 12:00"
+  },
+  {
+    "id": 12,
+    "nombre": "Lombardi, Isabella",
+    "especialidad": "Cardiologia",
+    "imagen": "./img/female.jpg",
+    "plan": "Grupo Sancor Seguros",
+    "horario": "De 12:00 a 16:00"
+  },
+  {
+    "id": 13,
+    "nombre": "Colombo, Emilia",
+    "especialidad": "Medicina Familiar",
+    "imagen": "./img/female.jpg",
+    "plan": "OSDE",
+    "horario": "De 8:00 a 12:00"
+  },
+  {
+    "id": 14,
+    "nombre": "Pellegrini, Facundo",
+    "especialidad": "Ortopedia",
+    "imagen": "./img/male.jpg",
+    "plan": "Swiss Medical",
+    "horario": "De 12:00 a 16:00"
+  },
+  {
+    "id": 15,
+    "nombre": "Russo, Victoria",
+    "especialidad": "Psiquiatria",
+    "imagen": "./img/female.jpg",
+    "plan": "Galeno",
+    "horario": "De 16:00 a 20:00"
+  },
+  {
+    "id": 16,
+    "nombre": "Medina, Benjamin",
+    "especialidad": "Dermatologia",
+    "imagen": "./img/male.jpg",
+    "plan": "Medicus",
+    "horario": "De 16:00 a 20:00"
+  },
+  {
+    "id": 17,
+    "nombre": "Fiore, Martina",
+    "especialidad": "Medicina General",
+    "imagen": "./img/female.jpg",
+    "plan": "Grupo Sancor Seguros",
+    "horario": "De 12:00 a 16:00"
+  },
+
+  {
+    "id": 18,
+    "nombre": "Fontana, Santiago",
+    "especialidad": "Pediatria",
+    "imagen": "./img/male.jpg",
+    "plan": "OMINT",
+    "horario": "De 16:00 a 20:00"
+  },
+  {
+    "id": 19,
+    "nombre": " Caruso, Manuel",
+    "especialidad": "Cardiologia",
+    "imagen": "./img/male.jpg",
+    "plan": "OSDE",
+    "horario": "De 8:00 a 12:00"
+  },
+  {
+    "id": 20,
+    "nombre": "Santoro, Olivia",
+    "especialidad": "Ginecologia",
+    "imagen": "./img/female.jpg",
+    "plan": "Swiss Medical",
+    "horario": "De 12:00 a 16:00"
+  }
+]

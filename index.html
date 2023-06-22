@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SaludAR | Main</title>
+    <!-- FUENTES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Eczar:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Toastify -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <!-- Animate CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <!----------- BODY ----------->
+
+  <body>
+    <!-------- Header -------->
+    <header>
+      <div class="menu-header fixed">
+        <div>
+          <a class="menu-logo-link" href="">Salud<b class="b-logo"> + </b>AR</a>
+        </div>
+        <ul class="menu-atajos">
+          <li>
+            <a class="menu-atajos-turnos" href="#turnos-div"
+              >Obtener un turno</a
+            >
+          </li>
+          <li>
+            <a class="menu-atajos-contacto" href="#contacto">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <!-------- Hero principal -------->
+    <section class="seccion-principal-hero">
+      <div class="container-fluid sp-hero">
+        <h1 class="h1-hero">Estamos <b class="h1-hero-b">para</b> SaludAR</h1>
+        <p class="p-hero">
+          Descubrí una atención médica de calidad y encontrá especialistas
+          confiables. En SaludAR, cuidamos tu bienestar en cada paso del camino.
+        </p>
+      </div>
+    </section>
+
+    <!-------- Cards (PROX) -------->
+    <section class="seccion-cartas">
+      <div class="card">
+        <div class="icon-card">
+          <i class="bi bi-person-vcard-fill i-personal"></i>
+        </div>
+        <div class="h3-card">Nuestro personal</div>
+        <div class="p-card">
+          Contamos con 20 profesionales con experiencia y dedicación, dispuestos
+          a <b>ayudarte</b>.
+        </div>
+      </div>
+      <div class="card">
+        <div class="icon-card">
+          <i class="bi bi-file-earmark-medical-fill i-especialidades"></i>
+        </div>
+        <div class="h3-card">Especialidades</div>
+        <div class="p-card">
+          Atendemos por el momento en <b>8 especialidades</b> diferentes, con
+          excelente personal.
+        </div>
+      </div>
+      <div class="card">
+        <div class="icon-card">
+          <i class="bi bi-journal-medical i-plan"></i>
+        </div>
+        <div class="h3-card">Planes que atendemos</div>
+        <div class="p-card">
+          Ofrecemos cobertura en los planes <b>mas utilizados</b> por nuestro
+          país
+        </div>
+      </div>
+    </section>
+
+    <!-------- Mostrador de turnos -------->
+
+    <div id="turnos-div" class="turnos-div">
+      <section class="seccion-turnos">
+        <h2 class="h2-turnos">Turnos disponibles</h2>
+        <div
+          id="container-medicos-disponibles"
+          class="container-medicos-disponibles"
+        >
+          <!-- Java -->
+          <div class="medicos-disponibles"></div>
+        </div>
+        <div class="info-turnos">
+          <h4>Especialidades disponibles <i class="bi bi-info-circle"></i></h4>
+          <p>
+            Medicina General, Pediatria, Cardiologia, Ortopedia, Psiquiatria,
+            Ginecologia, Dermatologia y Medicina Familiar
+            <b>con disponibilidad horaria de 8:00AM a 20:00PM</b>
+          </p>
+        </div>
+      </section>
+
+      <!-- Seccion de turnos agendados -->
+      <section class="seccion-turnos-agendados">
+        <h2 class="h2-turnos">Turnos agendados</h2>
+        <div id="container-turnos-agendados" class="container-turnos-agendados">
+          <!-- Java -->
+          <div class="medicos-disponibles"></div>
+        </div>
+
+        <div class="div-botones-turnos">
+          <button id="btnVaciar" class="btn-vaciar-turnos">
+            Vaciar turnos
+          </button>
+          <button
+            onclick="confirmarTurno()"
+            id="btnConfirmar"
+            class="btn-confirmar-turnos"
+          >
+            Confirmar turnos
+          </button>
+        </div>
+      </section>
+    </div>
+
+    <!-- PLANES -->
+
+    <section class="seccion-planes">
+      <div class="planes-logos">
+        <ul class="ul-planes">
+          <li><img src="./img/galeno.png" alt="" /></li>
+          <li><img src="./img/medicus.png" alt="" /></li>
+          <li><img src="./img/swissmedical.png" alt="" /></li>
+          <li><img src="./img/omint.png" alt="" /></li>
+          <li><img src="./img/osde.png" alt="" /></li>
+          <li><img src="./img/sancorsalud.png" alt="" /></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- FORMULARIO -->
+    <section id="contacto" class="seccion-formulario">
+      <div class="info-contacto">
+        <div class="info-contacto-izq">
+          <h2>¡Contactanos!</h2>
+          <p>
+            En SaludAR, entendemos la importancia de una comunicación efectiva y
+            transparente. Es por eso que hemos creado esta sección de contacto
+            para responder todas tus preguntas, resolver tus inquietudes y
+            brindarte asistencia personalizada.
+          </p>
+          <p>
+            Si tienes alguna pregunta sobre cómo utilizar nuestro servicio, cómo
+            encontrar un especialista adecuado para tus necesidades o si deseas
+            obtener más información sobre nuestras políticas y procedimientos,
+            no dudes en comunicarte con nosotros. Nuestro equipo de atención al
+            cliente altamente capacitado está listo para ayudarte en todo
+            momento.
+          </p>
+        </div>
+        <div>
+          <img class="imagen-contacto" src="./img/atencionmedica.jpg" alt="" />
+        </div>
+      </div>
+      <form id="formulario" class="formulario">
+        <div class="form-container">
+          <div class="form-izq">
+            <label for="nombre">Tu nombre:</label>
+            <input type="text" name="nombre-f" id="nombreForm" required />
+            <label for="apellido">Tu apellido:</label>
+            <input type="text" name="apellido-f" id="apellidoForm" required />
+            <label for="correo">Correo electrónico:</label>
+            <input type="text" name="correo-f" id="correoForm" required />
+            <label for="documento">Documento/pasaporte extranjero:</label>
+            <input type="text" name="dni-f" id="dniForm" required />
+          </div>
+          <div class="form-der">
+            <label for="textarea">Contacto:</label>
+            <textarea name="" id="" rows="3" placeholder="Tus sugerencias">
+            </textarea>
+          </div>
+        </div>
+        <div class="btn-form">
+          <input
+            type="submit"
+            id="btnForm"
+            value="Enviar"
+            class="btnContactoConfirmar"
+          />
+        </div>
+      </form>
+    </section>
+
+    <footer>
+      <div class="div-footer">
+        <p>Joaquín Garrote - 2023</p>
+        <h2 class="separador"></h2>
+        <div><p>Simulador de turnos | Curso Javascript - Coderhouse</p></div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
